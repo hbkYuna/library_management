@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/heading :: heading">
+    <meta charset="UTF-8">
+    <title id="title">Tips bewerken</title>
+</head>
+<body class="brown-body">
+<div th:replace="fragments/headerfooter :: header"> header</div>
+
+<div class="container-fluid booksEditCont">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h1 class="text-center">Books:</h1>
+            <form th:each="book: ${books}" method="post" th:action="@{/admin/deleteBook}" class="list-group-item">
+                <span th:text="${book.getTitle() + '&nbsp;&nbsp;&nbsp;&nbsp; [' + book.getAuthor() + ']'}"></span>
+                <input type="hidden" name="id" th:value="${book.getId()}">
+                <input class="floatRight trashcan" type="submit" th:name="book" value="">
+            </form>
+            <a class="adminFormButton" th:href="@{/admin/addbook/}">
+                <span>Add new book </span>
+            </a>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+<div th:replace="fragments/headerfooter :: footer">footer</div>
+</body>
+<div th:replace="fragments/scripts :: scripts"></div>
+</html>

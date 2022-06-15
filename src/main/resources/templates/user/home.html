@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/heading :: heading">
+    <meta charset="UTF-8">
+    <title id="title">Home</title>
+</head>
+<body>
+<div th:replace="fragments/headerfooter :: header"> header</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h1 class="text-center">My Books: </h1>
+            <section th:each="book: ${books}" class="list-group-item">
+                <span id="bookTitle" th:text="${book.getTitle()}"></span>
+            </section>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
+
+<div th:replace="fragments/headerfooter :: footer"> footer</div>
+</body>
+</html>

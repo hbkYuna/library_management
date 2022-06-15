@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/heading :: heading">
+    <meta charset="UTF-8">
+    <title id="title">Home</title>
+</head>
+<body>
+<div th:replace="fragments/headerfooter :: header"> header</div>
+
+<a id="arrow+" th:if="${!lastPage}" th:href="@{'/user/detailpage/' + ${book.getId() + 1}}" th:text="'-->'"></a>
+<a id="arrow-" th:if="${book.getId() != 1}" th:href="@{'/user/detailpage/' + ${book.getId() - 1}}" th:text="'<--'"></a>
+
+<h2 id="titleDetail" th:text="${book.getTitle()}"></h2>
+<article class="flexDetail">
+    <figure>
+        <img id="imageDetail" th:src="@{/files/boek.jpg}" alt="picture"/>
+    </figure>
+    <section>
+
+        <dl>
+            <dt>Author:</dt>
+            <dd th:text="${book.getAuthor()}"></dd>
+            <dt>Description:</dt>
+            <dd th:text="${book.getDescription()}"></dd>
+            <dt>Release year:</dt>
+            <dd th:text="${book.getYear()}"></dd>
+            <dt>Pages:</dt>
+            <dd th:text="${book.getPages()}"></dd>
+        </dl>
+    </section>
+</article>
+
+<form th:action="@{'/user/addToCart/' + ${book.getId()}}" method="post">
+    <input class="buttonBuy" th:value="'Add to cart'" type="submit">
+</form>
+
+</body>
+</html>

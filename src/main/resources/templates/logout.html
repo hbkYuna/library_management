@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/heading :: heading">
+        <title id="title">Logout - Hupl</title>
+    </head>
+    <body class="bodyLogin">
+        <div th:replace="fragments/headerfooter :: header"> header</div>
+        <main>
+            <div>
+                <div>
+                    <form th:action="@{/logout}" method="post" class="logout-form">
+                        <h4>Are you sure you want to log out?</h4>
+                        <div class="group">
+                            <input type="submit" value="Logout" class="buttonLogout">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <div th:replace="fragments/headerfooter :: footer"> footer</div>
+    </body>
+    <div th:replace="fragments/scripts :: scripts"></div>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/heading :: heading">
+        <title id="title">Error - Hupl</title>
+    </head>
+    <body>
+        <div th:replace="fragments/headerfooter :: header"> header</div>
+        <h1 class="errorH1">Something went wrong, please go back to the previous page</h1>
+        <div th:replace="fragments/headerfooter :: footer"> footer</div>
+    </body>
+    <div th:replace="fragments/scripts :: scripts"></div>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/heading :: heading">
+    <meta charset="UTF-8">
+    <title id="title">Tips Toevoegen</title>
+</head>
+<body class="bodyLogin">
+<div th:replace="fragments/headerfooter :: header"> header</div>
+<div class="main">
+    <p class="sign">Registration</p>
+    <form th:action="@{/registration}" class="form1" method="post">
+        <input class="un " name="username" type="text" placeholder="Username">
+        <input class="pass" type="password" name="password" placeholder="Password">
+        <input type="submit" class="submit" value="Create Account">
+
+    </form>
+</div>
+
+</body>
+
+</html>
+

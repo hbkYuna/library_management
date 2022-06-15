@@ -1,0 +1,313 @@
+/*--> Login CSS <--*/
+.bodyLogin {
+    background-color: #ece3d7;
+}
+
+.main {
+    background-color: #202020;
+    width: 400px;
+    height: 400px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+}
+
+.sign {
+    padding-top: 40px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+form.form1 {
+    padding-top: 40px;
+
+}
+
+.pass, .un {
+    width: 76%;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.5);
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+}
+
+.submit {
+    cursor: pointer;
+    border-radius: 1em;
+    color: #fff;
+    background: #6f6f6f;
+    border: 0;
+    padding: 10px 40px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 115px;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    margin-top: 25px;
+    width: 169px;
+}
+
+.forgot {
+    text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
+    color: #0000;
+    padding-top: 15px;
+}
+
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0;
+    }
+}
+
+.logout-form {
+    margin-top: 250px;
+}
+
+.logout-form > h4 {
+    text-align: center;
+}
+
+
+.buttonLogout {
+    display: block;
+    margin: auto;
+}
+
+/*---------------------------------------------------------*/
+
+/*--> Navigation <--*/
+.header {
+    background-color: #202020;
+}
+
+#navbarToggle {
+    margin-right: 48px;
+}
+
+a {
+    text-shadow: 0 0 3px rgba(117, 117, 117, 0.12);
+    color: white;
+    text-decoration: none
+}
+
+/*---------------------------------------------------------*/
+
+/*--> Homepage <--*/
+
+.homeMain {
+    text-align: center;
+
+}
+
+.homeMain p {
+    width: 500px;
+    margin: 25px auto;
+}
+
+/*---------------------------------------------------------*/
+
+/*--> Admin-start <--*/
+
+.adminContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+
+.adminItem {
+    width: 250px;
+    height: 85px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 30px;
+    margin: 75px 0;
+    background-color: #3D454C;
+    display: block;
+}
+
+a:hover {
+    color: grey;
+    text-underline: none;
+}
+
+/*---------------------------------------------------------*/
+
+/*--> Admin books management <--*/
+.floatRight {
+    float: right;
+    font-size: 10px;
+}
+
+.trashcan {
+    background: url(../files/DeleteUserIcon.png) no-repeat center;
+    border-radius: 3px;
+    width: 22px;
+    height: 22px;
+    border: none;
+}
+
+.booksEditCont {
+    margin-top: 50px;
+}
+
+.text-center {
+    margin-bottom: 25px;
+}
+
+.adminFormButton {
+    background-color: #3D454C;
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    horiz-align: center;
+    text-decoration: none;
+    margin: 10px auto auto auto;
+    display: block;
+}
+
+/*---------------------------------------------------------*/
+
+/*--> Admin add books <--*/
+
+.addBookForm {
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 450px;
+    background-color: #3D454C;
+    color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.saveBook {
+    background-color: whitesmoke;
+    color: #3D454C;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    horiz-align: center;
+    text-decoration: none;
+    margin: 10px auto auto auto;
+    display: block;
+}
+
+.inputAddBook {
+    margin-top: 5px;
+}
+
+#description {
+    width: 209px;
+}
+/*---------------------------------------------------------*/
+
+/*--> Catalog <--*/
+
+#bookTitle {
+    color: black;
+}
+
+.list-group-item {
+    text-align: center;
+}
+
+#book {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+#managebooks {
+    text-decoration: none;
+}
+
+.filterBox {
+    margin: 15px 0 0 15px;
+}
+
+/*---------------------------------------------------------*/
+
+
+/*--> Detailpage <--*/
+
+#imageDetail {
+    height: 350px;
+    margin-right: 20px;
+}
+
+.flexDetail {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    text-align: center;
+}
+
+#titleDetail {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#arrow\+ {
+    float: right;
+    color: black;
+    text-decoration: none;
+}
+
+#arrow- {
+    color: black;
+    text-decoration: none;
+}
+
+.buttonBuy {
+    display: block;
+    margin: auto;
+}
+
+/*---------------------------------------------------------*/
+
+
+/*--> Cart <--*/
+
+#makePurchase {
+    margin-top: 25px;
+}
+
+/*---------------------------------------------------------*/
+
+
+/*--> Admin add books <--*/
+
+
+/*---------------------------------------------------------*/
+
+
+/*--> Admin add books <--*/
+
+
+/*---------------------------------------------------------*/

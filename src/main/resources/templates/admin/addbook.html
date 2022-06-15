@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/heading :: heading">
+    <meta charset="UTF-8">
+    <title id="title">Add new book</title>
+</head>
+<body>
+<div th:replace="fragments/headerfooter :: header">header</div>
+
+<form class="addBookForm" th:action="@{/admin/addbook}" method="post">
+    <h1>Add a book:</h1>
+
+    <input class="inputAddBook" maxlength="50" type="text" id="title2" name="title" placeholder="Title" required>
+
+    <input class="inputAddBook" maxlength="50" type="text" id="author" name="author" placeholder="Author" required>
+
+    <textarea class="inputAddBook"  maxlength="1000" name="description" id="description" placeholder="Description" required></textarea>
+
+    <input class="inputAddBook" max="2022" type="number" id="year" name="year" required placeholder="Release year">
+
+    <input class="inputAddBook" max="10000" type="number" id="pages" name="pages" required placeholder="Pages">
+
+
+    <input class="saveBook" type="submit" value="Opslaan">
+</form>
+
+<div th:replace="fragments/headerfooter :: footer">footer</div>
+</body>
+<div th:replace="fragments/scripts :: scripts"></div>
+</html>
