@@ -1,11 +1,32 @@
- CREATE TABLE books (
-     ID          number identity(1,1) primary key,
-     title        varchar2(50),
-     language    varchar2(30),
-     pages       number,
-     author      varchar2(50),
-     year        number
- );
+INSERT INTO USER (ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('user_seq'), 'noah', '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm', 'ROLE_USER' );
 
-INSERT INTO books (title, language, pages, author, year)
-VALUES ('Lord of the rings', 'English', 400, 'JRR Tolkien', 1954 )
+INSERT INTO USER (ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('user_seq'), 'admin', '$2a$10$9TeBFudS7HsgCa4sSvP//O627sMq.KiTFrOr8IzrVlYw5c8aoKzNm', 'ROLE_ADMIN' );
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings', 'My precious', 579, 1959);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings 2', 'Still my precious', 800, 1963);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings 6', 'Still my precious', 800, 1963);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings 7', 'Still my precious', 800, 1963);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings 8', 'Still my precious', 800, 1963);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings 9', 'Still my precious', 800, 1963);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JRR Tolkien', 'Lord Of The Rings 10', 'Still my precious', 800, 1963);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JK ROWLING', 'Harry Potter 2', 'Still my precious', 800, 1983);
+
+INSERT INTO BOOK (ID, AUTHOR, TITLE, DESCRIPTION, PAGES, YEAR)
+VALUES (nextval('book_seq'), 'JK ROWLING', 'Harry Potter', 'Still my precious', 800, 1993);
